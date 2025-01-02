@@ -1,0 +1,45 @@
+Tetris Game Layout
+-------------------
+
+**Well:**
+The well is a 12x23 grid of squares, with a gray border around the edges. Each square is 26 pixels wide and 26 pixels tall.
+
+**Grid Coordinates:**
+The grid is divided into squares, with the origin (0,0) at the top-left corner. The x-axis increases from left to right, and the y-axis increases from top to bottom.
+
+**Color Scheme:**
+- **Black:** Represents empty squares in the well.
+- **Gray:** Represents the border around the well.
+- **Color Array:** Each piece has a unique color from the array `tetraminoColors`. The colors are:
+  - Cyan
+  - Blue
+  - Orange
+  - Yellow
+  - Green
+  - Pink
+  - Red
+
+**Piece Layout:**
+Each piece is represented by a set of points in the `Tetraminos` array. Each point is a pair of coordinates (x, y) that defines the position of the piece in the grid.
+
+**Gameplay:**
+- **Dropping Piece:** The current piece is represented by a set of points in the `Tetraminos` array. The piece is initially placed at the top of the well and falls down due to gravity.
+- **Rotation:** The piece can be rotated clockwise or counterclockwise using the arrow keys.
+- **Movement:** The piece can be moved left or right using the arrow keys.
+- **Dropping:** The piece can be dropped down one line using the space bar.
+- **Fixing:** When the piece reaches the bottom of the well, it is fixed in place and becomes part of the well.
+- **Clearing Rows:** When a row is completely filled with blocks, it is cleared and the pieces above it move down.
+- **Scoring:** The score increases based on the number of rows cleared simultaneously.
+
+**Score Display:**
+The current score is displayed at the bottom of the screen in white text.
+
+**Keyboard Controls:**
+- **Up Arrow:** Rotate the piece clockwise.
+- **Down Arrow:** Rotate the piece counterclockwise.
+- **Left Arrow:** Move the piece left.
+- **Right Arrow:** Move the piece right.
+- **Space Bar:** Drop the piece down one line.
+
+**Game Loop:**
+The game runs in a continuous loop, with the piece falling down every second. The game ends when the piece reaches the top of the well and cannot be moved further.
